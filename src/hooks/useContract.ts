@@ -281,7 +281,7 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
     // eslint-disable-next-line default-case
     switch (chainId) {
       case ChainId.MAINNET:
-      case "336" as string:
+      case '336' as string:
         address = '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
         break
     }

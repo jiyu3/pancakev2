@@ -11,7 +11,6 @@ import ChainId from '../src/config/constants/chainId'
 const BLOCK_SUBGRAPH_ENDPOINT = BLOCKS_CLIENT
 const STREAMING_FAST_ENDPOINT = INFO_CLIENT
 
-
 interface SingleFarmResponse {
   id: string
   reserveUSD: string

@@ -54,21 +54,17 @@ function useTokensFromMap(tokenMap: TokenAddressMap, includeUserAdded: boolean):
 
 export function useDefaultTokens(): { [address: string]: Token } {
   const defaultList = useDefaultTokenList()
-  console.info("d", defaultList)
   return useTokensFromMap(defaultList, false)
 }
 
 export function useAllTokens(): { [address: string]: Token } {
   const allTokens = useCombinedActiveList()
-  console.info("a", allTokens)
   return useTokensFromMap(allTokens, true)
 }
 
 export function useAllInactiveTokens(): { [address: string]: Token } {
   // get inactive tokens
   const inactiveTokensMap = useCombinedInactiveList()
-  console.info("ia", inactiveTokensMap)
-  console.info("aaa")
   const inactiveTokens = useTokensFromMap(inactiveTokensMap, false)
 
   // filter out any token that are on active list
@@ -87,7 +83,7 @@ export function useAllInactiveTokens(): { [address: string]: Token } {
 
 export function useUnsupportedTokens(): { [address: string]: Token } {
   const unsupportedTokensMap = useUnsupportedTokenList()
-  console.info("unsupportedTokensMap", useTokensFromMap(unsupportedTokensMap, false))
+  console.info('unsupportedTokensMap', useTokensFromMap(unsupportedTokensMap, false))
   return useTokensFromMap(unsupportedTokensMap, false)
 }
 

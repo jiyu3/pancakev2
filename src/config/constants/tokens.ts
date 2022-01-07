@@ -2016,7 +2016,7 @@ const tokens = () => {
   const chainId = process.env.REACT_APP_CHAIN_ID
 
   // If testnet - return list comprised of testnetTokens wherever they exist, and mainnetTokens where they don't
-  if (parseInt(chainId, 10) === "336" as string) {
+  if (parseInt(chainId, 10) === ('336' as string)) {
     return Object.keys(mainnetTokens).reduce((accum, key) => {
       return { ...accum, [key]: testnetTokens[key] || mainnetTokens[key] }
     }, {} as typeof testnetTokens & typeof mainnetTokens)
